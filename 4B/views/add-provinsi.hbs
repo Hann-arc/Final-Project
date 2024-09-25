@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Provinsi</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+      <!-- NAVBAR -->
+     {{> navbar}}
+<!-- NAVBAR END -->
+
+<div class="container-project1">
+ 
+    <div class="form-blog">
+      <h1 class="title-form-blog">Add Provinsi</h1>
+      <form enctype="multipart/form-data" action="/form/provinsi" method="post">
+        <div>
+          <input
+          name="name"
+            type="text"
+            id="nama"
+            placeholder=""
+            class="form-input"
+          />
+          <label class="all-label" for="nama">Provinsi Name</label>
+        </div>
+        <div>
+            <input
+            name="gubernur"
+              type="text"
+              id="gubernur"
+              placeholder=""
+              class="form-input"
+            />
+            <label class="all-label" for="gubernur">Governor</label>
+        </div>
+        <div>
+            <input
+            name="populasi"
+              type="number"
+              id="populasi"
+              placeholder=""
+              class="form-input"
+            />
+            <label class="all-label" for="populasi">Population</label>
+        </div>
+        <div>
+            <input
+            name="pulau"
+              type="text"
+              id="pulau"
+              placeholder=""
+              class="form-input"
+            />
+            <label class="all-label" for="pulau">Island</label>
+        </div>
+        <div class="label-for-date">
+            <input type="date" id="label-start-date" name="diresmikan" required />
+            <label class="all-label start-date-style" for="label-start-date">
+              Year it was established
+            </label>
+          </div>          
+        <div>
+          <textarea id="message" name="description" placeholder=""></textarea>
+          <label class="all-label"  for="message">Description</label>
+        </div>
+        <div class="upload-container">
+          <label for="file-upload" class="custom-file-upload">
+            Upload Image
+          </label>
+        </div>
+        <div class="file-input-container">
+          <input id="file-upload" name="image" type="file" />
+          <span
+            class="file-label"
+            onclick="document.getElementById('file-upload').click();"
+            >Choose</span
+          >
+          <span
+            class="file-icon"
+            onclick="document.getElementById('file-upload').click();"
+          >
+            <i class="fa-solid fa-paperclip"></i>
+          </span>
+        </div>
+        <div>
+          <button id="btn-1" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
